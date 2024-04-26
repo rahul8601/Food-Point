@@ -9,9 +9,7 @@ import Sppiner from "../../components/Loader";
 const Details = () => {
   const useparams = useParams();
 
-  const { data, loading } = UseFetch(
-    `www.themealdb.com/api/json/v1/1/lookup.php?i=${useparams.id}`
-  );
+  const { data, loading } = UseFetch(`/lookup.php?i=${useparams.id}`);
 
   return (
     <div className="mt-[4rem]">

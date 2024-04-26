@@ -7,9 +7,7 @@ import Sppiner from "../../components/Loader";
 const AriaSection = () => {
   const navigate = useNavigate();
 
-  const { data, loading } = UseFetch(
-    `www.themealdb.com/api/json/v1/1/filter.php?a=Canadian`
-  );
+  const { data, loading } = UseFetch(`/filter.php?a=Canadian`);
 
   return (
     <div>

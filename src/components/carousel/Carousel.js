@@ -8,9 +8,7 @@ import { useNavigate } from "react-router-dom";
 const Carousel = () => {
   const navigate = useNavigate();
 
-  const { data, loading, error } = UseFetch(
-    `www.themealdb.com/api/json/v1/1/categories.php`
-  );
+  const { data, loading, error } = UseFetch(`/categories.php`);
   // console.log(data);
 
   const carouselContainer = useRef();

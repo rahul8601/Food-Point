@@ -8,9 +8,7 @@ import Card from "../../components/Card";
 const Meals = () => {
   const useparams = useParams();
   const navigate = useNavigate();
-  const { data, loading } = UseFetch(
-    `www.themealdb.com/api/json/v1/1/filter.php?c=${useparams.name}`
-  );
+  const { data, loading } = UseFetch(`/filter.php?c=${useparams.name}`);
 
   return (
     <div className="mt-[4rem]">
