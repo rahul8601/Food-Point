@@ -8,16 +8,16 @@ const SearchBox = () => {
   const [data, setData] = useState(null);
 
   const navigate = useNavigate();
+  const baseUrl = "https://www.themealdb.com/api/json/v1/1";
 
   useEffect(() => {
     const controller = new AbortController();
     if (query) {
       const searchData = async () => {
         try {
-          const res = await fetch(
-            `https:/www.themealdb.com/api/json/v1/1/filter.php?i=${query}`,
-            { signal: controller.signal }
-          );
+          const res = await fetch(`${baseUrl}/filter.php?i=${query}`, {
+            signal: controller.signal,
+          });
 
           const data = await res.json();
           setData(data);
